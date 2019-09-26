@@ -438,6 +438,7 @@ path solve_dijkstra(Maze& m, point & start, point & end, int & mycost)
 		{
 			finalCost = currentCost;
 			finalInfo = currentInfo;
+			break;
 		}
 
 		//check the neighbors
