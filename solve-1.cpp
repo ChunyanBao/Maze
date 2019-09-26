@@ -403,7 +403,6 @@ void update_dijkstra(Maze &m, shared_ptr<info> currentInfo,
 
 //path solve_dijkstra(Maze& m, int rows, int cols)
 path solve_dijkstra(Maze& m, point & start, point & end, int & mycost)
-
 {
 	//priority queue and unordered map come together
 	unordered_map<point, int, pair_hash> best;
