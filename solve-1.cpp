@@ -409,18 +409,15 @@ path solve_dijkstra(Maze& m, point & start, point & end, int & mycost)
 	unordered_map<point, int, pair_hash> best;
 	priority_queue<shared_ptr<info>,vector<shared_ptr<info>>, compare> pq;
 
-	//list to hold the path
+	//list for the path
 	list<point> List; 
 
-	//wrap information together: point and cost so far and it's previous pointer
-	//1. push the first info into the q, the start point to the map
-	//the queue and map always updated together
+	//1. push the first info into q, the start point to the map	
 	shared_ptr<info> startPoint (new info(start, 0, NULL));
 	pq.push(startPoint);
 	
 	best[start] = 0;
 
-	//valiable for ending information
 	shared_ptr<info> finalInfo;
 	int finalCost = 0;
 
