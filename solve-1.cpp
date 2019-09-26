@@ -300,7 +300,6 @@ path solve_bfs(Maze& m, int rows, int cols)
 	point end(rows - 1, cols - 1);
 	vector<vector<point>> track(rows, vector<point>(cols, end));
 
-
 	Q.push(start);
 	Set.insert(start);
 
