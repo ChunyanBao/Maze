@@ -307,11 +307,11 @@ path solve_bfs(Maze& m, int rows, int cols)
 	{
 		point p = Q.front();
 		Q.pop();
-
-		//check for neighbors
+		
 		if(p.first == end.first && p.second == end.second){
 			break;
 		}
+		//check for neighbors
 		if(m.can_go_up(p.first, p.second))
 		{
 			update_bfs(p, UP, Q, Set, track);
